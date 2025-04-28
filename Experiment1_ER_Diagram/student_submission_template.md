@@ -1,6 +1,6 @@
-# ER DIAGRAM SUBMISSION 
-# NAME - Madhumitha V
-# REGISTER NUMBER - 212223060145
+## ER DIAGRAM SUBMISSION 
+## NAME - Madhumitha V
+## REGISTER NUMBER - 212223060145
 
 ## SCENARIO CHOSEN:
 Hospital ER Diagram
@@ -24,27 +24,27 @@ Department - Dept_ID (PK), Dept_Name, Dept_Head, Room No.
 ~~~
 ## RELATIONSHIPS AND CONSTRAINS:
 
-# Book (Patient → Appointment)
+## Book (Patient → Appointment)
 Cardinality: Many-to-Many
 Participation: Total (Every appointment must involve at least one patient)
 
-# Assign (Appointment → Doctor)
+## Assign (Appointment → Doctor)
 Cardinality: Many-to-One
 Participation: Total (Each appointment must be assigned to a doctor)
 
-# Associate (Patient → Medical Records)
+## Associate (Patient → Medical Records)
 Cardinality: One-to-Many
 Participation: Partial (A patient may or may not have medical records)
 
-# Maintain (Doctor → Medical Records)
+## Maintain (Doctor → Medical Records)
 Cardinality: One-to-Many
 Participation: Partial (Doctors maintain multiple records)
 
-# Receive (Patient → Billing)
+## Receive (Patient → Billing)
 Cardinality: One-to-Many
 Participation: Partial (Patients may have multiple billing records)
 
-# Specialization (Doctor → Department)
+## Specialization (Doctor → Department)
 Cardinality: Many-to-One
 Participation: Partial (Doctor specializes in a department)
 
@@ -60,6 +60,5 @@ Billing is separated to maintain financial records cleanly, keeping healthcare s
 Departments were created for Doctors to properly map organizational hierarchy and specialization.
 Many-to-Many relationships like Book and Assign are handled with associative entities (like Appointment) to simplify complex scheduling scenarios.
 
-# RESULT:
-
-
+## RESULT:
+Thus, the ER diagram for the hospital management system was successfully designed, and the entities, relationships, and constraints were clearly represented.
