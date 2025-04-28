@@ -1,80 +1,64 @@
-# ER Diagram Submission - Student Name
+## ER DIAGRAM SUBMISSION 
+## NAME - 
+## REGISTER NUMBER - 
 
-## Scenario Chosen:
-University ER Diagram
+## SCENARIO CHOSEN:
+Hospital ER Diagram
 
-## ER Diagram:
-![ER Diagram](er_diagram.png)![Screenshot (83)](https://github.com/user-attachments/assets/8aff4107-d860-4736-a34b-7ea74a66f9dc)
+## ER DIAGRAM:
+![WhatsApp Image 2025-03-06 at 16 59 45_fea08594](https://github.com/user-attachments/assets/2af6ff0b-07af-45e2-a8dd-4d098165f658)
 
+## ENTITIES AND ATTRIBUTES:
+~~~
+Patient - Patient_ID (PK), Name, Gender, Date of Birth (DoB), Address, Phone No., Email, Insurance
 
-Entities and Attributes:
-```
-Student: Name, DOB, Subjects Enrolled, Register Number, Email ID, Phone Number
+Doctor - ID (PK), Name, Specialization, Phone No., Email, Work Schedule
 
-University: University Name, University ID, Students and Faculties
+Appointment - Appointment_ID (PK), Date, Time
 
-Department: Department Name, Department ID
+Medical Records - ID (PK), Diagnosis
 
-Program: Program Name, Program Code, Subjects
+Billing - Billing_ID (PK), Patient_ID (FK), Amount, Billing Date, Payment Status
 
-Faculty: Name, Subject, Faculty ID
+Department - Dept_ID (PK), Dept_Name, Dept_Head, Room No.
+~~~
+## RELATIONSHIPS AND CONSTRAINS:
 
-Course: Course Code, Course Name, Credits
-```
-Relationships and Constraints:
-```
-Relationship between Student and University ("Relationship")
+## Book (Patient → Appointment)
+Cardinality: Many-to-Many
+Participation: Total (Every appointment must involve at least one patient)
 
-Cardinality: Many-to-One (M:N)
+## Assign (Appointment → Doctor)
+Cardinality: Many-to-One
+Participation: Total (Each appointment must be assigned to a doctor)
 
-Participation: Total (each student must belong to a university)
+## Associate (Patient → Medical Records)
+Cardinality: One-to-Many
+Participation: Partial (A patient may or may not have medical records)
 
-Student is in a Department ("is in a")
+## Maintain (Doctor → Medical Records)
+Cardinality: One-to-Many
+Participation: Partial (Doctors maintain multiple records)
 
-Cardinality: Many-to-One (M:N)
+## Receive (Patient → Billing)
+Cardinality: One-to-Many
+Participation: Partial (Patients may have multiple billing records)
 
-Participation: Partial (a student may or may not be associated immediately)
+## Specialization (Doctor → Department)
+Cardinality: Many-to-One
+Participation: Partial (Doctor specializes in a department)
 
-Department provides Program ("provides")
+## EXTENSION (Prerequisite / Billing):
 
-Cardinality: Many-to-Many (M:N)
+Billing was modeled by connecting Patient to Billing through the "Receive" relationship, where billing entries are generated for each patient based on services received. The Billing entity includes attributes like Billing_ID, Amount, Billing Date, and Payment Status to track financial transactions independently but linked via Patient_ID.
 
-Participation: Total for Program, Partial for Department
+## DESIGN CHOICES:
 
-Program contains Course ("contains")
+Entities like Patient, Doctor, and Appointment are core in any healthcare system, so they were naturally included.
+Medical Records are associated separately for flexibility — allowing multiple diagnoses per patient and doctor.
+Billing is separated to maintain financial records cleanly, keeping healthcare service records independent from financial operations.
+Departments were created for Doctors to properly map organizational hierarchy and specialization.
+Many-to-Many relationships like Book and Assign are handled with associative entities (like Appointment) to simplify complex scheduling scenarios.
 
-Cardinality: One-to-Many (1:N)
-
-Participation: Total for Course (every course must be in a program)
-
-University has Faculties ("has")
-
-Cardinality: One-to-Many (1:N)
-
-Participation: Partial
-
-Faculty handles Course ("handles")
-
-Cardinality: Many-to-Many (M:N)
-
-Participation: Partial (not all faculties must handle a course immediately)
-```
-Extension (Prerequisite / Billing):
-Prerequisite Modeling:
-```
-If prerequisites between courses are needed, we can extend by introducing a new relationship "Prerequisite" between Course and Course itself (recursive relationship), indicating one course must be completed before another.
-```
-Billing Modeling:
-```
-Billing can be handled by adding an additional entity like Billing with attributes like Student ID, Amount, Due Date, Paid Status. It would have a relationship with Student.
-```
-Design Choices:
-```
-I selected Student, Faculty, University, Department, Program, and Course as entities because they represent major objects in any academic environment.
-
-I used M:N relationships for handles and provides because one faculty can handle multiple courses, and one course may need multiple faculties (guest lectures, lab assistants, etc.).
-
-Subjects enrolled is an attribute of Student because it varies per student, rather than as a separate entity to keep it simple.
-
-Recursive extension of Course to model prerequisites is a clean way to manage dependencies without cluttering the original structure.
-
+## RESULT:
+Thus, the ER diagram for the hospital management system was successfully designed, and the entities, relationships, and constraints were clearly represented.
