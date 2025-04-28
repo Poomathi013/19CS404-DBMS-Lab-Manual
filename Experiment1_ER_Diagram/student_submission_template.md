@@ -1,6 +1,6 @@
 ## ER DIAGRAM SUBMISSION 
-## NAME - 
-## REGISTER NUMBER - 
+## NAME - Poomathi.s 
+## REGISTER NUMBER - 212223060198
 
 ## SCENARIO CHOSEN:
 Hospital ER Diagram
