@@ -1,4 +1,5 @@
-# ER DIAGRAM SUBMISSION - NAME - Madhumitha V
+# ER DIAGRAM SUBMISSION 
+# NAME - Madhumitha V
 # REGISTER NUMBER - 212223060145
 
 ## SCENARIO CHOSEN:
@@ -58,5 +59,7 @@ Medical Records are associated separately for flexibility — allowing multiple 
 Billing is separated to maintain financial records cleanly, keeping healthcare service records independent from financial operations.
 Departments were created for Doctors to properly map organizational hierarchy and specialization.
 Many-to-Many relationships like Book and Assign are handled with associative entities (like Appointment) to simplify complex scheduling scenarios.
+
+# RESULT:
 
 
