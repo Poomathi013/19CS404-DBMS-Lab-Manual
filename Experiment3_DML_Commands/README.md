@@ -47,123 +47,153 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Paste Question 1 here
+Write a SQL statement to change the first_name column of employees table with 'John' for those employees whose department_id is 80 and gets a commission_pct is less than .35.
 
 ```sql
--- Paste your SQL code below for Question 1
+update  EMPLOYEES
+set first_name = "John"
+where department_id = 80; 
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="935" alt="image" src="https://github.com/user-attachments/assets/270cdc26-dd39-4e3f-b793-e85dea9682f9" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+Change the supplier name to upper case where contact person contains ' Singh' in suppliers table.
 
 ```sql
--- Paste your SQL code below for Question 2
+update suppliers
+set supplier_name =upper(supplier_name)
+where contact_person like "%Singh%";
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="908" alt="image" src="https://github.com/user-attachments/assets/8cbf0db3-3442-446f-897e-c82a054fedcd" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+Write a SQL statement to double the availability of the product with product_id 1.
 
 ```sql
--- Paste your SQL code below for Question 3
+update PRODUCTS
+set availability = availability*2
+where product_id  = 1;
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="658" alt="image" src="https://github.com/user-attachments/assets/cb6f4107-a89f-42d6-9376-b9e526ef0b8e" />
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+Write a SQL statement to change the EMAIL and COMMISSION_PCT column of the following EMPLOYEES table with 'not available' and 0.55 for those employees whose DEPARTMENT_ID is 110.
+
+                              
 
 ```sql
--- Paste your SQL code below for Question 4
+update   EMPLOYEES
+set EMAIL = "not available", 
+ COMMISSION_PCT = 0.55
+where DEPARTMENT_ID = 110;
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="821" alt="image" src="https://github.com/user-attachments/assets/4c3e9a73-bfaa-4b69-9e37-3480d0eb7367" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to Delete All Doctors with a NULL Last Name
 
 ```sql
--- Paste your SQL code below for Question 5
+delete  from Doctors
+where last_name IS NULL;
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="662" alt="image" src="https://github.com/user-attachments/assets/3353b625-8800-4728-a1d8-73da57b73497" />
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL query to remove rows from the table 'customer' with the following condition -
 
 ```sql
--- Paste your SQL code below for Question 6
+delete from Customer
+where cust_city LIKE"L%";
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/4fb910d8-0951-4b75-bb93-cb2a00554be7" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write a SQL query to Delete customers from 'customer' table where 'CUST_CITY' is not 'New York' and 'OUTSTANDING_AMT' is greater than 5000.
 
 ```sql
--- Paste your SQL code below for Question 7
+delete from Customer
+where CUST_CITY != 'New York' 
+and OUTSTANDING_AMT > 5000;
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="906" alt="image" src="https://github.com/user-attachments/assets/c2248e4b-ec6c-4b0d-86a8-d0d15b4b0c88" />
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+Write a SQL query to Delete All Doctors with a NULL Specialization
 
 ```sql
--- Paste your SQL code below for Question 8
+delete from Doctors
+where specialization is NULL;
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="475" alt="image" src="https://github.com/user-attachments/assets/90a1bfbb-308d-400e-88e8-b39b1d3e08a6" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write a SQL query to Delete customers from 'customer' table where 'GRADE' is odd.
 
 ```sql
--- Paste your SQL code below for Question 9
+delete from Customer
+where GRADE %2 =1;
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="950" alt="image" src="https://github.com/user-attachments/assets/938af0d2-e13f-45e2-8ce2-47a4d5259177" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+ Write a query to fetch 3 top salaried records from EmployeePosition table.
+
 
 ```sql
--- Paste your SQL code below for Question 10
+select * from EmployeePosition
+order by salary desc
+limit 3;
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="671" alt="image" src="https://github.com/user-attachments/assets/690411a0-d15d-4428-af4d-df620dbb53db" />
+
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
