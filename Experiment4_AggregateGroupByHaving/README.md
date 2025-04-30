@@ -38,123 +38,203 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+How many doctors specialize in each medical specialty?
 
 ```sql
--- Paste your SQL code below for Question 1
+select Specialty,count(*) as TotalDocto
+from Doctors
+group by Specialty;
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="479" alt="image" src="https://github.com/user-attachments/assets/65e3403d-a48a-4bed-a892-65a93cb451dd" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+How many appointments are scheduled for each patient?
 
 ```sql
--- Paste your SQL code below for Question 2
+select PatientID,count(*) as TotalAppointments
+from Appointments
+group by PatientID;
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="490" alt="image" src="https://github.com/user-attachments/assets/cc255bc2-b07f-44c8-87e1-c47663bba129" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+What is the most common diagnosis among patients?
 
 ```sql
--- Paste your SQL code below for Question 3
+select Diagnosis,count(*) as DiagnosisCount
+from MedicalRecords
+group by Diagnosis
+order by DiagnosisCount desc
+limit 1;
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="551" alt="image" src="https://github.com/user-attachments/assets/7f4bd00c-98a2-41d7-94af-1df5ff768d74" />
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+Write a SQL query to determine the number of customers who received at least one grade for their activity.
+
+Sample table: customer
+
+customer_id |   cust_name    |    city    | grade | salesman_id 
+
+-------------+----------------+------------+-------+-------------
+
+        3002 | Nick Rimando   | New York   |   100 |        5001
+
+        3007 | Brad Davis     | New York   |   200 |        5001
+
+        3005 | Graham Zusi    | California |   200 |        5002
 
 ```sql
--- Paste your SQL code below for Question 4
+select count(grade) as COUNT
+from customer
+where grade is not null;
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="341" alt="image" src="https://github.com/user-attachments/assets/8e665fb2-d495-489f-9f27-be76b45b1da9" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to calculate total available amount of fruits that has a price greater than 0.5 . Return total Count. 
+
+Note: Inventory attribute contains amount of fruits
+
+Table: fruits
+
+name        type
+----------  ----------
+id          INTEGER
+name        TEXT
+unit        TEXT
+inventory   INTEGER
+price       REAL
 
 ```sql
--- Paste your SQL code below for Question 5
+select sum(Inventory) as total_available_amount
+from fruits
+where price>0.5;
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="587" alt="image" src="https://github.com/user-attachments/assets/7e77616a-cbde-4469-b34b-ea14d3cc0544" />
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL query to  find the average salary of all employees?
+
+Table: employee
+
+name        type
+----------  ----------
+id          INTEGER
+name        TEXT
+age         INTEGER
+city        TEXT
+income      INTEGER
 
 ```sql
--- Paste your SQL code below for Question 6
+select avg(income) as Average_Salary
+from employee;
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="556" alt="image" src="https://github.com/user-attachments/assets/06a3c271-d52e-47b2-a22f-3e864add0a8b" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write a SQL query to find the total amount of fruits with a unit type of 'LB'.
+
+Note: Inventory attribute contains amount of fruits
+
+Table: fruits
+
+name        type
+----------  ----------
+id          INTEGER
+name        TEXT
+unit        TEXT
+inventory   INTEGER
+price       REAL
 
 ```sql
--- Paste your SQL code below for Question 7
+select sum(Inventory) as total
+from fruits
+where unit like ('LB');
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="511" alt="image" src="https://github.com/user-attachments/assets/dff0dc24-fad4-4849-a98a-8140de4a13a5" />
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+Write the SQL query that accomplishes the grouping of data by joining date (jdate), calculates the minimum work hours for each date, and excludes dates where the minimum work hour is not less than 10.
 
 ```sql
--- Paste your SQL code below for Question 8
+select jdate,MIN(workhour) 
+from employee1
+group by jdate
+having MIN(workhour)<10;
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="601" alt="image" src="https://github.com/user-attachments/assets/ee4a3f21-a082-46d5-9601-1b7e2efffda4" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write the SQL query that accomplishes the grouping of data by age, calculates the maximum income for each age group, and includes only those age groups where the maximum income is greater than 2,000,000.
 
 ```sql
--- Paste your SQL code below for Question 9
+select age,MAX(income) 
+from employee
+group by age
+having MAX(income)>2000000;
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="556" alt="image" src="https://github.com/user-attachments/assets/abf2d4ba-13ea-4ef5-adbb-cef98ff0c937" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+Write the SQL query that accomplishes the grouping of data by age, calculates the average income for each age group, and includes only those age groups where the average income falls between 300,000 and 500,000.
 
 ```sql
--- Paste your SQL code below for Question 10
+select age,AVG(income)
+from employee
+group by age
+having AVG(income) between 300000 and 500000;
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="560" alt="image" src="https://github.com/user-attachments/assets/54787944-8c2f-443e-b9cd-402ba4cb993e" />
+
 
 
 ## RESULT
