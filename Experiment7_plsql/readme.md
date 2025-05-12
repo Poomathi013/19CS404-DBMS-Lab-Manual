@@ -30,7 +30,7 @@ END;
 ## 1. Write a PL/SQL program to find the Greatest of Two Numbers
 
 ### Steps:
-...
+```
 SET SERVEROUTPUT ON;
 
 DECLARE
@@ -43,7 +43,7 @@ BEGIN
       DBMS_OUTPUT.PUT_LINE('Greater number is: ' || num2);
    END IF;
 END;
-...
+```
 **Expected Output:**  
 ![image](https://github.com/user-attachments/assets/f608b320-4075-4be8-9a0a-74c79c717710)
 
@@ -53,7 +53,7 @@ END;
 ## 2. Write a PL/SQL program to Calculate Sum of First N Natural Numbers
 
 ### Steps:
-...
+```
 DECLARE
    n     NUMBER := 10;  -- You can change this value
    i     NUMBER := 1;
@@ -66,7 +66,7 @@ BEGIN
 
    DBMS_OUTPUT.PUT_LINE('Sum of first ' || n || ' natural numbers is: ' || sum);
 END;
-...
+```
 
 **Expected Output:**  
 ![image](https://github.com/user-attachments/assets/bbf8d7c9-dd4c-4fd4-b5b5-7c8067fb006c)
@@ -76,7 +76,7 @@ END;
 ## 3. Write a PL/SQL program to generate Fibonacci series
 
 ### Steps:
-...
+```
 SET SERVEROUTPUT ON;
 
 SET SERVEROUTPUT ON;
@@ -100,7 +100,7 @@ BEGIN
       i := i + 1;
    END LOOP;
 END;
-...
+```
 **Expected Output:**  
 n = 7  
 ![image](https://github.com/user-attachments/assets/a2f51d3a-b6ed-4d25-910b-a833d3fdaecd)
@@ -111,7 +111,7 @@ n = 7
 ## 4. Write a PL/SQL Program to display the number in Reverse Order
 
 ### Steps:
-...
+```
 SET SERVEROUTPUT ON;
 
 DECLARE
@@ -130,12 +130,12 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE('Reversed number is: ' || reversed);
 END;
 /
-...
+```
 
 **Expected Output:**  
 n = 1535  
 Reversed number is 5351
-![image](https://github.com/user-attachments/assets/e9ac5916-71cc-4b7d-acab-573d88f95b24)
+![image](https://github.com/user-attachments/assets/607d034f-9e85-4b43-b190-d2dbaa243918)
 
 
 ---
@@ -143,7 +143,7 @@ Reversed number is 5351
 ## 5. Write a PL/SQL program to find the largest of three numbers
 
 ### Steps:
-...
+```
 SET SERVEROUTPUT ON;
 
 DECLARE
@@ -163,7 +163,7 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE('a = ' || a || ', b = ' || b || ', c = ' || c);
    DBMS_OUTPUT.PUT_LINE('Largest of three number is ' || largest);
 END;
-...
+```
 
 **Expected Output:**  
 a = 10, b = 9, c = 15  
