@@ -103,7 +103,8 @@ END;
 ```
 **Expected Output:**  
 n = 7  
-![image](https://github.com/user-attachments/assets/a2f51d3a-b6ed-4d25-910b-a833d3fdaecd)
+![image](https://github.com/user-attachments/assets/9e4bb231-ad39-4620-9e7c-628708708337)
+
 
 
 ---
