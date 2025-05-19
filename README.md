@@ -63,7 +63,7 @@ Key Differences:
 *Expected Output:*  
 Square of 6 is 36
 
-
+```
 CREATE OR REPLACE PROCEDURE find_square(p_number IN NUMBER) IS
     v_square NUMBER;
 BEGIN
@@ -77,7 +77,7 @@ BEGIN
     find_square(6);
 END;
 /
-
+```
 ![image](https://github.com/user-attachments/assets/d6436d5d-b540-43d7-a396-2a8debfbb20a)
 
 ---
@@ -96,7 +96,7 @@ Factorial of 5 is 120
 
 SET SERVEROUTPUT ON;
 
-
+```
 CREATE OR REPLACE FUNCTION get_factorial(p_number IN NUMBER)
 RETURN NUMBER
 IS
@@ -122,7 +122,7 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE('Factorial of ' || v_input || ' is ' || v_output);
 END;
 /
-
+```
 
 ![image](https://github.com/user-attachments/assets/1319e42f-c31c-49dd-8c20-1bb349322a54)
 
@@ -139,7 +139,7 @@ END;
 *Expected Output:*  
 12 is Even
 
-
+```
 SET SERVEROUTPUT ON;
 
 
@@ -159,7 +159,7 @@ BEGIN
 END;
 /
 
-
+```
 ![image](https://github.com/user-attachments/assets/1275528f-e95b-4523-8f3c-90f065a73b94)
 
 ---
@@ -175,7 +175,7 @@ END;
 
 *Expected Output:*  
 Reversed number of 1234 is 4321
-
+```
 
 CREATE OR REPLACE FUNCTION reverse_number(p_number IN NUMBER)
 RETURN NUMBER IS
@@ -201,7 +201,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Reversed number of ' || v_input || ' is ' || v_result);
 END;
 /
-
+```
 
 ![image](https://github.com/user-attachments/assets/b08ddc4c-962a-4af3-b600-55a98927cc9a)
 
@@ -223,7 +223,7 @@ Multiplication table of 5:
 ...  
 5 x 10 = 50
 
-
+```
 CREATE OR REPLACE PROCEDURE print_table(p_number IN NUMBER) IS
 BEGIN
     DBMS_OUTPUT.PUT_LINE('Multiplication table of ' || p_number || ':');
@@ -238,7 +238,7 @@ BEGIN
     print_table(5);
 END;
 /
-
+```
 
 ![image](https://github.com/user-attachments/assets/0ef9eca5-64dc-4cc4-a91b-218d48a989dc)
 
